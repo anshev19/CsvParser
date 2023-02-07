@@ -30,17 +30,4 @@ public class JsonParser {
         }
         return staff;
     }
-
-    public String readString(String filePath) {
-        StringBuilder builder = new StringBuilder();
-        try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
-            String line;
-            while ((line = reader.readLine()) != null) {
-                builder.append(line);
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return builder.toString();
-    }
 }
